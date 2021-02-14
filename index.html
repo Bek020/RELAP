@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/hamburger.css">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    
+    <div class="wrapper">
+        <div class="conteiner">
+            <div class="wrap">
+                
+                <header class="header">
+                    <header class="logo">
+                        <h2 class="logo__title">
+                            RELAP
+                        </h2>
+                    </header>
+
+                    <header class="nav">
+                        <a href="#" class="nav__link">Home</a>
+                        <a href="#" class="nav__link">Features</a>
+                        <a href="#" class="nav__link">Works</a>
+                        <a href="#" class="nav__link">About</a>
+                        <a href="#" class="nav__link">People</a>
+                        <a href="#" class="nav__link">News</a>
+                        <button class="nav__btn">Contact us</button>
+                    </header>
+
+                    <button class="hamburger hamburger--spin" type="button">
+                        <span class="hamburger-box">
+                            <span class="hamburger-inner"></span>
+                        </span>
+                    </button>
+                    
+                </header>
+
+                <h4 class="wrap__subtitle">
+                    ALIAS CONSEQUATUR
+                </h4>
+                <h1 class="wrap__title">
+                    Voluptatibus maiores
+                </h1>
+                <p class="wrap__text">
+                    Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.
+                </p>
+                <button class="wrap__btn">
+                    Explore
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        var hamburger = document.querySelector(".hamburger");
+        var nav = document.querySelector(".nav");
+        hamburger.addEventListener("click", function() {
+          hamburger.classList.toggle("is-active");
+          nav.classList.toggle("is-active");
+        });
+    </script>
+</body>
+</html>

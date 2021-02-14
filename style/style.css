@@ -1,0 +1,178 @@
+body {
+    margin: 0 auto;
+}
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    background: linear-gradient(50deg,#C86DD7, #3023AE );
+    overflow: hidden;
+}
+
+.conteiner {
+    margin: 0 15px;
+    height: 770px;
+}
+
+.logo__title {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav {
+    margin-left: auto;
+} 
+
+.nav__link {
+    font-family: 'Source Sans Pro', bold;
+    margin: 25px 40px;
+    text-decoration: none;
+    color: white;
+}
+
+.nav__btn {
+    font-family: 'Source Sans Pro', semi-bold;
+    color: white;
+    font-size: 17px;
+    padding: 12px 45px;
+    border-radius: 40px;
+    border: 1px solid white;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.hamburger {
+    position: relative;
+    float: right;
+    z-index: 10;
+}
+
+.wrap__subtitle {
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+.wrap__title {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font-size: 50px;
+}
+
+.wrap__text {
+    position: relative;
+    font-family: 'Source Sans Pro', semi-bold;
+    color: white;
+    z-index: 3;
+}
+
+.wrap__btn {
+    position: absolute;
+    font-family: 'Source Sans Pro', bold;
+    background: #FFC300;
+    color: white;
+    border-radius: 24px;
+    border: none;
+    padding: 12px 57px;
+    z-index: 5;
+}
+
+.wrap::before {
+    content: '';
+    position: absolute;
+    top: 430px;
+    left: 15px;
+    width: 325px;
+    height: 325px;
+    border-radius: 50%;
+    background-image: linear-gradient(50deg, #C86DD7, #3023AE);
+    animation: speaker linear 5s infinite alternate;
+}
+
+.wrap::after {
+    content: '';
+    position: absolute;
+    top: 390px;
+    left: 60px;
+    width: 400px;
+    height: 423px;
+    background: url(../img/Speaker.png) no-repeat;
+    background-size: 300px;
+    z-index: 2;
+}
+
+@keyframes speaker {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(20px);
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .hamburger {
+        display: none;
+    }
+    .conteiner {
+        margin: 0 auto;
+        max-width: 1170px;
+    }
+    .wrap::before {
+        top: 203px;
+        left: 730px;
+        width: 443px;
+        height: 443px;
+    }
+    .wrap::after {
+        top: 113px;
+        left: 800px;
+        width: 409px;
+        height: 423px;
+        background-size: cover;
+    }
+    .wrap__subtitle {
+        padding-top: 130px;
+    }
+    .wrap__title {
+        margin: 20px 0;
+        font-size: 70px;
+        width: 500px;
+    }
+    .wrap__text {
+        width: 570px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .nav {
+        position: absolute;
+        top: -400px;
+        left: 0;
+        right: 0;
+        height: 400px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        text-align: center;
+        font-size: 30px;
+        background: #2b208bdc;
+        transition: .5s;
+        z-index: 5;
+        border-radius: 20px;
+    }
+    .nav__link {
+        margin: 5px 0;
+    }
+    .nav.is-active {
+        top: 0;
+    }
+}
